@@ -1,6 +1,10 @@
 import data from './mockedData/data.json';
 export default function Home() {
 
+    // Your task is to write a program that determines whether this card will ever get Bingo.
+
+    // Can you write a program that tells you which board to pick to guarantee a win against the giant squid?
+
 console.log(data);
 
   return (
