@@ -39,7 +39,7 @@
 
 ## About The App
 
-Welcome to a wonderful Bingo Game. As the captain of a submarine stopped by a giant squid, you'll need to win a bingo game to continue your journey. 
+Welcome to a wonderful Bingo Game. As the captain of a submarine stopped by a giant squid, you'll need to win a bingo game to continue your journey.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
