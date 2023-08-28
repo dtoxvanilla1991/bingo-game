@@ -1,5 +1,6 @@
 import data from "./mockedData/data.json";
 import { useMemo } from "react";
+import Outcome from "@/app/components/Outcome";
 
 interface Data {
   random: number[];
@@ -86,20 +87,16 @@ export default function Home() {
         });
       });
     });
-    console.log("WE HAVE A WINNER");
+    console.log(win ? "WE HAVE A WINNER" : "SQUID GOT US KILLED");
     return win;
   }, [data]);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-amber-200 text-amber-800">
       <section>
         <h1 className="text-4xl font-bold text-center">
           Welcome to Bingo Game
         </h1>
-        <p className="text-center text-xl mt-4">
-          {win
-            ? "We have survived"
-            : "Squid got us killed and our mission failed. Try again!"}
-        </p>
+        <Outcome win={win} />
       </section>
     </main>
   );

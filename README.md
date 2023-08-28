@@ -49,7 +49,27 @@ Welcome to a wonderful Bingo Game. As the captain of a submarine stopped by a gi
 - Numbers are chosen at random and marked on all boards on which they appear.
 - If all numbers in any row or column of a board are marked, that board wins.
 - Diagonals don't count.
-- Data sets sit in mockedData folder.
+- Data sets should be called from external txt files (Data sets sit in mockedData folder).
+
+## Implemented Features
+
+- Bingo Game functionality based on the rules above;
+- Responsive design;
+- Mobile-first approach;
+- Unit testing using Jest, including edge cases;
+
+## Ideas for Future Features
+
+- Add Bingo Card generation functionality to enable creating Cards on a fly during the setup;
+- Add option to generate random numbers on a fly during the game if dataSet random numbers are not provided;
+- Add Storybook for better component development;
+- CI/CD using Github Actions;
+- Add e2e tests using Cypress and Argos Screenshots;
+- Add more graceful and "smart" error handling, providing the user with more information about the error and the development team with more information about the error;
+- Move assets to Cloudinary (that hosts with on AWS and optimizes them for all devices) for maximum performance;
+- Using dependency injection for better code scalability & testability;
+- Logging & monitoring using FullStory;
+- Crash/Error reports using Sentry;
 
 ## Screenshots of the app
 
@@ -88,23 +108,6 @@ yarn
 
 - 🔥 `start` - run development server
 - 🔧 `dev` - run development server
-
-## Implemented Features
-
-- Bingo Game functionality based on the rules above;
-
-## Ideas for Future Features
-
-- Add Bingo Card generation functionality to enable creating Cards on a fly during the setup;
-- Add Storybook for better component development;
-- CI/CD using Github Actions;
-- Add unit tests using Jest, including edge cases;
-- Add e2e tests using Cypress and Argos Screenshots;
-- Add more graceful and "smart" error handling, providing the user with more information about the error and the development team with more information about the error;
-- Move assets to Cloudinary (that hosts with on AWS and optimizes them for all devices) for maximum performance;
-- Using dependency injection for better code scalability & testability;
-- Logging & monitoring using FullStory;
-- Crash/Error reports using Sentry;
 
 ## Contact
 
