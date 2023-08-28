@@ -104,10 +104,11 @@ or
 yarn
 ```
 
-## NPM Scripts
+## NPM/YARN Scripts
 
 - 🔥 `start` - run development server
 - 🔧 `dev` - run development server
+- 🔧 `test` - run tests
 
 ## Contact
 
