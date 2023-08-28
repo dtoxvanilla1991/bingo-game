@@ -21,20 +21,35 @@ export default function Home() {
     //create empty array of objects equal to the number of cards
     //each object will have 2 key for rows and columns
     //rows and columns will be Maps of numbers for easy retrieval and deletion
-    const cardsOnBoard: CardProps[] = data.cards.map(() => ({
-      rows: new Map(),
-      columns: new Map(),
-    }));
+    const cardsOnBoard: CardProps[] = data.cards.map(
+      (): CardProps => ({
+        rows: new Map(),
+        columns: new Map(),
+      }),
+    );
     //we will loop through each card and check if the number is in the row or column and if it is, we will delete it
     data.cards.forEach((card: number[], index: number) => {
+      //rows
       let rowNumber: number = 1;
       for (let i: number = 0; i < card.length; i += 5) {
         const cardRow: number[] = card.slice(i, i + 5);
         cardsOnBoard[index].rows.set(rowNumber, cardRow);
         rowNumber++;
       }
+      //columns
+      let columnNumber: number = 1;
+      //getting starting position of each card column
+      for (let j: number = 0; j < 5; j++) {
+        let cardColumn: number[] = [];
+        //getting the numbers for each card column
+        for (let k: number = 0; k < card.length; k += 5) {
+          cardColumn.push(card[j + k]);
+          cardsOnBoard[index].columns.set(columnNumber, cardColumn);
+        }
+        columnNumber++;
+      }
     });
-    console.log(cardsOnBoard[1].rows);
+    console.log(cardsOnBoard[0].columns);
     //if the row or column is empty, we will set the win to true and break the loop
 
     return win;
